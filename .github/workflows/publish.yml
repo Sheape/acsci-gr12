@@ -33,5 +33,5 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: acsci-gr12
           directory: public
-          gitHubToken: ${{ secrets.TOKEN }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
