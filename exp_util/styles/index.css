@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'Cartograph CF Bold Italic';
+    src: url('/fonts/CartographCF-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: 'Cartograph CF Italic';
+    src: url('/fonts/CartographCF-RegularItalic.otf');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Nerd Font Italic';
+    src: url('/fonts/JetBrainsMonoNerdFontPropo-Italic.ttf');
+}
+
+body {
+    background: #1E1E2E;
+    color: #C6D0F5;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Cartograph CF Bold Italic";
+}
+
+h2 {
+    color: #F38BA8;
+    font-size: 2em;
+}
+
+h2::before {
+    content: "◉ ";
+    display: inline-block;
+    font-size: 0.7em;
+    font-family: Helvetica;
+    font-style: normal;
+    margin-right: 0.35em;
+    transform: translateY(-0.2em);
+}
+
+#table-of-contents h2::before {
+    content: none;
+}
+
+/* h3::before { */
+/*     content: "● "; */
+/*     display: inline-block; */
+/*     font-size: 1em; */
+/*     font-family: Helvetica; */
+/*     font-style: normal; */
+/*     margin-right: 0.35em; */
+/*     transform: translateY(-0.1em); */
+/* } */
+
+/* h4::before { */
+/*     content: "○ "; */
+/*     display: inline-block; */
+/*     font-size: 1em; */
+/*     font-family: Helvetica; */
+/*     font-style: normal; */
+/*     margin-right: 0.35em; */
+/*     /\* transform: translateY(0.001em); *\/ */
+/* } */
+
+/* h5::before { */
+/*     content: "◈ "; */
+/*     display: inline-block; */
+/*     font-size: 0.7em; */
+/*     font-family: Helvetica; */
+/*     font-style: normal; */
+/*     margin-right: 0.35em; */
+/*     transform: translateY(-0.2em); */
+/* } */
+
+
+h3 {
+    color: #EBA0AC;
+    font-size: 1.75em;
+}
+
+h4 {
+    color: #F5C2E7;
+    font-size: 1.5em;
+}
+
+h5 {
+    color: #87B0F9;
+    font-size: 1.2em;
+}
+
+h6 {
+    color: #74C7EC;
+    font-style: normal;
+}
+
+#toggle-sidebar h2 {
+    background-color: #CBA6F7;
+}
+
+#toggle-sidebar h2::before {
+    content: none;
+}
+
+#table-of-contents .close-sidebar {
+    color: #313244;
+}
+
+#table-of-contents > .toc-searchbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background: #CBA6F7;
+}
+
+#toc-searchbar-input {
+    height: 2rem;
+    width: 80%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5em;
+    color: #CBA6F7;
+    position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 1em;
+  left: 50%; /* Center the border at the bottom of the container */
+  transform: translateX(-50%) translateY(0.5em); /* Center horizontally */
+  width: 100%; /* Adjust the width as needed */
+  border-bottom: 2px solid #313244;
+}
+
+.example {
+    background: #181825;
+    font-family: 'JetBrains Mono Nerd Font Italic';
+    color: #89DCEB;
+    border: 1px solid #696D86;
+    border-radius: 5px;
+    font-size: 1.05em;
+}
+
+blockquote {
+    background-color: #181825;
+    font-family: 'JetBrains Mono Nerd Font Italic';
+    color: #A6E3A1;
+    border-left: 5px solid #8E95B3;
+    border-radius: 5px;
+    overflow: visible;
+}
+
+span.underline {
+    text-decoration: underline;
+    color: #A6E3A1;
+}
+
+#content {
+    background: #1E1E2E;
+    max-width: 1800px;
+}
+
+p {
+    font-size: 1.1em;
+    max-width: 800px;
+}
+
+#content a {
+    color: #B4BEFE;
+    text-decoration: underline;
+}
+
+li {
+    line-height: 1.75em;
+}
+
+li.active {
+    background-color: #313244;
+}
+
+#text-table-of-contents>li {
+    background: #313244;
+}
+
+#text-table-of-contents a:hover {
+    color: #313244 !important;
+    background-color: #CBA6F7;
+}
+
+ul.nav li.active a {
+    background-color: #313244;
+    border-color: #313244;
+    color: #C6D0F5 !important;
+}
+
+ul.nav > li.active > a {
+    color: #C6D0F5 !important;
+    border: none !important;
+    text-decoration: none !important;
+}
+
+ul.nav a {
+    color: #C6D0F5 !important;
+    border: none !important;
+    text-decoration: none !important;
+}
+
+ul.nav > li.active li.active > a {
+    color: #CBA6F7 !important;
+}
+
+#text-table-of-contents > ul > li > a {
+    color: #A1A8C9;
+    text-decoration: none !important;
+}
+
+#table-of-contents {
+    background: #181825;
+    overflow-y: auto;
+}
+
+#table-of-contents h2 {
+    padding-top: 0.3em;
+    background-color: #CBA6F7;
+    color: #313244;
+    font-size: 1.1em;
+}
+
+#home-text-header {
+    margin-bottom: 0px !important;
+}
+
+#home-text-header a {
+    font-size: 1.5em !important;
+    margin-left: 0em;
+    text-decoration: none;
+    padding: 0px !important;
+    text-align: center;
+    color: #313244;
+}
+
+#home-text-header a:visited {
+    margin-left: 0px !important;
+    color: #313244;
+    text-decoration: none !important;
+    margin-bottom: 0px !important;
+}
+
+#home-text-header a:hover {
+    color: #313244 !important;
+    background-color: inherit !important;
+    text-decoration: none !important;
+}
+
+#svg-home-icon {
+    margin-left: 4em;
+}
+
+.svg-div-container {
+    background: #CBA6F7;
+    padding-top: 0.3em;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+}
+
+.toc-header-container {
+    background: #CBA6F7;
+}
+
+
+table tr:nth-child(2n) td, table th {
+    background-color: #313244 !important;
+}
+
+table td {
+    background-color: #43465A !important;
+    line-height: 1.75em;
+}
+
+table thead {
+    border: none;
+}
+
+th {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+table {
+    border: 1px solid #565970;
+}
+
+table td, table th {
+    border-left: 1px solid #565970;
+    border-right: 1px solid #565970;
+    border-top: none;
+    border-bottom: none;
+}
+
+b {
+    color: #CBA6F7;
+}
+
+i {
+    font-family: "Cartograph CF Italic";
+    color: #FAB387;
+}
+
+.references::before {
+    content: "";
+    display: block;
+    margin-top: 20%;
+    border-top: 2px solid #313244;
+}
+
+.references > h2 {
+    padding-top: 0.5em;
+}
+
+.references :is(a, h3, h4, h5, h6) {
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 0.95em;
+}
+
+.references i {
+    color: #87B0F9;
+}
+
+#table-of-contents i {
+    color: #87B0F9;
+}
+
+#postamble {
+    background: #181825;
+    border-top: solid 10px #313244;
+}
+
+#postamble .date {
+    color: #A6E3A1;
+}
+
+#postamble .author {
+    color: #B4BEFE;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+    max-width: 60%;
+}

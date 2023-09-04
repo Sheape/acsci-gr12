@@ -1,0 +1,27 @@
+name: Publish Website
+on:
+  repository_dispatch:
+    types: [trigger_workflow]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      deployments: write
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Install Emacs
+        run: sudo apt install emacs-nox --yes
+      - name: Build the site
+        run: make
+      - name: Publish to gh-pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: public
